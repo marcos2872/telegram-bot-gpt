@@ -23,11 +23,11 @@ return response.data.choices[0].message
 
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
 
-bot.start((ctx) => ctx.reply('welcome'))
+bot.start((ctx) => ctx.reply('Eu sou a IA (Inteligência Artificial), uma entidade virtual projetada para ajudá-lo em suas necessidades. Como assistente digital, estou aqui para responder suas perguntas e ajudá-lo no que for necessário.'))
 
 bot.on(message('text'), async (ctx) => {
   const text = await chat(ctx.message.text)
-  
+
   ctx.reply(text.content)
 });
 
