@@ -27,9 +27,7 @@ bot.start((ctx) => ctx.reply('welcome'))
 
 bot.on(message('text'), async (ctx) => {
   const text = await chat(ctx.message.text)
-  // const test = async () => setTimeout(() => 'OI', 4000)
-
-  // ctx.reply(await test())
+  
   ctx.reply(text.content)
 });
 
